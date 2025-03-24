@@ -25,6 +25,7 @@ runs:
   using: 'composite'
   steps:
     - run: |
+        set -ex;
         SCRIPT=$(find ${GITHUB_ACTION_PATH} -name entrypoint.sh | head -1)
         chmod +x $SCRIPT
 

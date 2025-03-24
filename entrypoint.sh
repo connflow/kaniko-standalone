@@ -1,7 +1,7 @@
 #!/bin/bash
 # Script to build Docker images using Kaniko
 
-set -e
+set -ex;
 
 # Default values
 platform="amd64"
