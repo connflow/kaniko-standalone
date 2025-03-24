@@ -68,6 +68,7 @@ chmod +x /tmp/kaniko/executor
 
 # Prepare chroot
 cp -r /tmp/kaniko "$WORKDIR/"
+test ~/.docker && cp -r ~/.docker /kaniko/.docker
 export DOCKER_CONFIG=/kaniko/.docker/
 mkdir -p "$WORKDIR/kaniko/workspace"
 
