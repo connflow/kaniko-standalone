@@ -70,7 +70,7 @@ chmod +x /tmp/kaniko/executor
 cp -r /tmp/kaniko "$WORKDIR/"
 export DOCKER_CONFIG=/kaniko/.docker/
 mkdir -p "$WORKDIR/kaniko/workspace"
-if [[ -d $GITHUB_WORKSPACE/.docker ]]; then cp -r $GITHUB_WORKSPACE/.docker "$WORKDIR/kaniko/.docker"; fi
+if [[ -d $GITHUB_WORKSPACE/.docker ]]; then echo $GITHUB_WORKSPACE; cp -r $GITHUB_WORKSPACE/.docker "$WORKDIR/kaniko/.docker"; fi
 
 cd "$WORKDIR"
 
