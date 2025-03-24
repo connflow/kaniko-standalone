@@ -70,7 +70,7 @@ chmod +x /tmp/kaniko/executor
 cp -r /tmp/kaniko "$WORKDIR/"
 export DOCKER_CONFIG=/kaniko/.docker/
 mkdir -p "$WORKDIR/kaniko/workspace"
-test ~/.docker && cp -r ~/.docker "$WORKDIR/kaniko/.docker"
+test $HOME/.docker && cp -r $HOME/.docker "$WORKDIR/kaniko/.docker"
 
 cd "$WORKDIR"
 
