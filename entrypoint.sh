@@ -119,4 +119,4 @@ export KANIKO_EXTRA_ARGS="$extra_args"
 END
 
 # Execute Kaniko build
-sudo chroot . bash -c ". /.env; set; ./kaniko/executor -f /kaniko/workspace/$(basename ${dockerfile}) --context=/kaniko/workspace/ --force --destination=$destination --cleanup $KANIKO_EXTRA_ARGS"
+sudo chroot . bash -c ". /.env; set; ./kaniko/executor -f /kaniko/workspace/$(basename ${dockerfile}) --context=/kaniko/workspace/ --force --destination=$destination --cleanup $extra_args"
