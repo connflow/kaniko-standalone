@@ -72,9 +72,6 @@ export DOCKER_CONFIG=/kaniko/.docker/
 mkdir -p "$WORKDIR/kaniko/workspace"
 if [[ -d $GITHUB_WORKSPACE/.docker ]]; then echo $GITHUB_WORKSPACE; cp -r $GITHUB_WORKSPACE/.docker "$WORKDIR/kaniko/"; fi
 
-cat $GITHUB_WORKSPACE/.docker/config.json;
-cat $WORKDIR/kaniko/.docker/config.json;
-
 cd "$WORKDIR"
 
 mkdir dev
